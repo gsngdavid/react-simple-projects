@@ -1,2 +1,2 @@
-# react-simple-projects
+# React simple projects
 Let's play with react👨‍💻👍
