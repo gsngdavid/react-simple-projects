@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Inter-Bold': 'Inter-Bold',
+        'Inter-SemiBold': 'Inter-SemiBold',
+      },
+
+    },
   },
   plugins: [],
 }

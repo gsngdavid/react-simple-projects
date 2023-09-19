@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .container {
+    @apply px-2 lg:px-8 w-full max-w-7xl mx-auto
+  }
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url('../public/fonts/inter/Inter-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  src: url('../public/fonts/inter/Inter-SemiBold.ttf');
+}
