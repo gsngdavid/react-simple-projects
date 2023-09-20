@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: 'Inter-Regular';
+  src: url('../public/fonts/inter/Inter-Regular.ttf');
+}
+
+@font-face {
   font-family: 'Inter-Bold';
   src: url('../public/fonts/inter/Inter-Bold.ttf');
 }

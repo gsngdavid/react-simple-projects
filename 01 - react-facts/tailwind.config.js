@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        'Inter-Regular': 'Inter-Regular',
         'Inter-Bold': 'Inter-Bold',
         'Inter-SemiBold': 'Inter-SemiBold',
       },
