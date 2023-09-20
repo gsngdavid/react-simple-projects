@@ -9,6 +9,9 @@ module.exports = {
         'Inter-Bold': 'Inter-Bold',
         'Inter-SemiBold': 'Inter-SemiBold',
       },
+      backgroundImage: {
+        'bg-body': "url(../public/bg.png);"
+      }
 
     },
   },
