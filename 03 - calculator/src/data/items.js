@@ -28,7 +28,7 @@ const items = [
         operator: false,
     },
     {
-        item: 'X',
+        item: 'x',
         operator: true,
     },
     {
@@ -68,8 +68,8 @@ const items = [
         operator: false,
     },
     {
-        item: '·',
-        operator: true,
+        item: '.',
+        operator: false,
     },
     {
         item: '=',
