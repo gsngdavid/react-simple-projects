@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         "primary": "#8424a6"
+      },
+      fontFamily: {
+        'meme': 'impact'
       }
     },
   },

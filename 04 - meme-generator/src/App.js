@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import MemeImage from "./components/MemeImage";
 import Button from "./components/UI/Button";
 import Container from "./components/UI/Container";
 import Input from "./components/UI/Input";
@@ -15,6 +16,7 @@ function App() {
           </form>
           <Button>Get a new meme image  🖼</Button>
         </div>
+        <MemeImage />
       </Container>
     </div>
   );
