@@ -1,5 +1,13 @@
-function Button({ children }) {
-    return <button className="bg-primary rounded-md py-2 text-white font-medium">{ children }</button>;
+function Button({ onClick, children }) {
+    const clickHandler = () => {
+        onClick();
+    }
+    return <button
+                className="bg-primary rounded-md py-2 text-white font-medium"
+                onClick={clickHandler}
+                >
+                { children }
+            </button>;
 }
 
 export default Button;

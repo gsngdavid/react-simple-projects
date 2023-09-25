@@ -4,18 +4,28 @@ import MemeImage from "./components/MemeImage";
 import Button from "./components/UI/Button";
 import Container from "./components/UI/Container";
 import Input from "./components/UI/Input";
+import memes from './data/memes.json';
 
 function App() {
   const [ topText, setTopText ] = useState('Shut up');
   const [ bottomText, setBottomText ] = useState('And take my money');
+  const [ memeImage, setMemeImage ] = useState('./memeimg.png');
 
-  function firstTextChangeHandler(text) {
+  const firstTextChangeHandler = text => {
     setTopText(text);
   }
 
-  function lastTextChangeHandler(text) {
+  const lastTextChangeHandler = text => {
     setBottomText(text);
   }
+
+  const randomNumber = limit => Math.floor(Math.random() * limit);
+
+  const getRandomImage = () => {
+    const meme = memes[(randomNumber(memes.length))];
+    setMemeImage(meme.url);
+  }
+
 
   return (
     <div>
@@ -26,9 +36,9 @@ function App() {
             <Input onChange={firstTextChangeHandler} />
             <Input onChange={lastTextChangeHandler} />
           </form>
-          <Button>Get a new meme image  🖼</Button>
+          <Button onClick={getRandomImage}>Get a new meme image  🖼</Button>
         </div>
-        <MemeImage topText={topText} bottomText={bottomText} />
+        <MemeImage topText={topText} bottomText={bottomText} memeImage={memeImage} />
       </Container>
     </div>
   );
