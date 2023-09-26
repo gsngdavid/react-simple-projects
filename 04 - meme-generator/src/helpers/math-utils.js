@@ -1,0 +1,1 @@
+export  const randomNumber = limit => Math.floor(Math.random() * limit);
