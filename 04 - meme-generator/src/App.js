@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import MemeImage from "./components/MemeImage";
 import Button from "./components/UI/Button";
@@ -6,6 +6,7 @@ import Container from "./components/UI/Container";
 import Input from "./components/UI/Input";
 import localMemes from './data/memes.json';
 import { randomNumber } from "./helpers/math-utils";
+import { fetcher } from "./helpers/api-utils";
 
 function App() {
   const [ memes, setMemes ] = useState(localMemes);
@@ -26,6 +27,20 @@ function App() {
     setMemeImage(meme.url);
   }
 
+  useEffect(() => {
+    const fetchMemes = async(url) => {
+      try {
+        const memes = await fetcher(url);
+        setMemes(memes);
+      }
+      catch(err) {
+        console.log("Fetching has failed! let's use local data"); 
+      }
+    }
+
+    fetchMemes('https://api.imgflip.com/get_memes');
+  }, []);
+
 
   return (
     <div>
@@ -44,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
