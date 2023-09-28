@@ -19,11 +19,20 @@ export default function App() {
     }
     
     function updateNote(text) {
-        setNotes(oldNotes => oldNotes.map(oldNote => {
-            return oldNote.id === currentNoteId
-                ? { ...oldNote, body: text }
-                : oldNote
-        }))
+        setNotes(oldNotes => {
+            // Put modified note on the top
+            let updatedNotes = [];
+            for(let i = 0; i < oldNotes.length; i++) {
+                const oldNote = oldNotes[i];
+                if(oldNote.id === currentNoteId) {
+                    updatedNotes.unshift({ ...oldNotes[i], body: text });
+                }
+                else {
+                    updatedNotes.push(oldNote)
+                }
+            }
+            return updatedNotes;
+        });
     }
     
     function findCurrentNote() {
