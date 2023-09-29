@@ -1,5 +1,11 @@
 function App() {
-  return <h1>Mapping list</h1>
+  const ANIMALS = ['dog', 'cat', 'chicken', 'cow', 'sheep', 'horse'];
+  return <div>
+    <ul>
+      <h1>Domestic Animals</h1>
+      {ANIMALS.map((animal, index) => <li key={index}>{animal}</li>)}
+    </ul>
+  </div>
 }
 
 export default App
