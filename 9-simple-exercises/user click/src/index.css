@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+}
+
+.nav {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  margin: 5rem auto;
+}
