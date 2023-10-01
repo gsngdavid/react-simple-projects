@@ -1,4 +1,6 @@
-import { useState } from "react";
+import fs from 'fs';
+
+import { useEffect, useState } from "react";
 import AddTodo from "./components/AddTodo"
 import Task from "./components/Task"
 import TASKS from "./data/tasks.json";

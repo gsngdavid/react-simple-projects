@@ -14,7 +14,7 @@ function AddTodo({ onAddTask }) {
         setInput(event.target.value);
     }
 
-    return <form onSubmit={submitHandler} className="max-w-lg mx-auto border flex justify-between gap-1 shadow-lg rounded-[3rem] px-4 py-2">
+    return <form onSubmit={submitHandler} className="max-w-lg mx-auto border flex justify-between gap-1 shadow-lg rounded-[3rem] px-4 py-3">
         <input
             name="task"
             placeholder="Add todo..."
