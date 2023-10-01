@@ -1,26 +1,27 @@
 [
     {
-        "name": "dog",
-        "image": "./assets/dog.jpg"
+        "id": "1",
+        "task": "IAmHere",
+        "done": false
     },
     {
-        "name": "cat",
-        "image": "./assets/cat.webp"
+        "id": "2",
+        "task": "react js example.com",
+        "done": false
     },
     {
-        "name": "chicken",
-        "image": "./assets/chicken.jpg"
+        "id": "3",
+        "task": "A todo app developed using consolidate your knowledge about React",
+        "done": false
     },
     {
-        "name": "cow",
-        "image": "./assets/cow.jpg"
+        "id": "4",
+        "task": "Task 4",
+        "done": false
     },
     {
-        "name": "sheep",
-        "image": "./assets/sheep.jpg"
-    },
-    {
-        "name": "horse",
-        "image": "./assets/horse.jpg"
+        "id": "5",
+        "task": "Task 5",
+        "done": false
     }
 ]
