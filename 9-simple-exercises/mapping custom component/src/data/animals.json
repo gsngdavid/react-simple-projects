@@ -1,0 +1,26 @@
+[
+    {
+        "name": "dog",
+        "image": "./assets/dog.jpg"
+    },
+    {
+        "name": "cat",
+        "image": "./assets/cat.webp"
+    },
+    {
+        "name": "chicken",
+        "image": "./assets/chicken.jpg"
+    },
+    {
+        "name": "cow",
+        "image": "./assets/cow.jpg"
+    },
+    {
+        "name": "sheep",
+        "image": "./assets/sheep.jpg"
+    },
+    {
+        "name": "horse",
+        "image": "./assets/horse.jpg"
+    }
+]
