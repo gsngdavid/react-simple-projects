@@ -3,10 +3,9 @@ import fs from 'fs';
 import { useEffect, useState } from "react";
 import AddTodo from "./components/AddTodo"
 import Task from "./components/Task"
-import TASKS from "./data/tasks.json";
 
 function App() {
-  const [ tasks, setTasks ] = useState(TASKS);
+  const [ tasks, setTasks ] = useState([]);
 
   const changeTaskStateHandler = id => {
     setTasks(prevTasks => prevTasks.map(prevTask => prevTask.id === id ? { ...prevTask, done: !prevTask.done}: prevTask));
