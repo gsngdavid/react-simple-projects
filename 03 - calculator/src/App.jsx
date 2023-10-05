@@ -1,8 +1,7 @@
-
-
 import { useState } from "react";
 import Box from "./components/Box";
 import items from "./data/items";
+import { calculateResult } from "./helpers/math-utils";
 
 function App() {
 
@@ -12,26 +11,8 @@ function App() {
   const [ result, setResult ] = useState(null);
 
   function resultHandler() {
-    let result = null;
-    switch(oper) {
-      case '+':
-        result = +lOperand + +rOperand;
-        break;
-      case '-':
-        result = +lOperand - +rOperand;
-        break;
-      case 'x':
-        result = +lOperand * +rOperand;
-        break;
-      case '/':
-        result = +lOperand / +rOperand;
-        break;
-      case '%':
-        result = +lOperand % +rOperand;
-        break;
-      default:
-        break;
-    }
+    const result = calculateResult(+lOperand, oper, rOperand);
+    
     setResult(result);
     setLOperand(result);
     setROperand(null);
