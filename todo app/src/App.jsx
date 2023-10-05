@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 import { useEffect, useState } from "react";
 import AddTodo from "./components/AddTodo"
 import Task from "./components/Task"
