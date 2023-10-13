@@ -1,0 +1,13 @@
+.nav {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+
+.action {
+  width: fit-content;
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
