@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "calculator-v1",
+    "form",
+    "main",
+    "mapping-custom-component",
+    "mapping-list",
+    "rendering-json",
+    "state-props",
+    "todo-app"
+  ],
+  "parent": {
+    "calculator-v1": "main",
+    "form": "main",
+    "main": null,
+    "mapping-custom-component": "main",
+    "mapping-list": "main",
+    "rendering-json": "main",
+    "state-props": "main",
+    "todo-app": "main"
+  },
+  "order": [
+    "main",
+    "calculator-v1",
+    "form",
+    "mapping-custom-component",
+    "mapping-list",
+    "rendering-json",
+    "state-props",
+    "todo-app"
+  ]
+}
