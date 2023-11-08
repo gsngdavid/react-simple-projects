@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
 import AddTodo from "./components/AddTodo"
 import Task from "./components/Task"
+import { useSelector } from "react-redux";
 
 function App() {
-  const [ tasks, setTasks ] = useState([]);
+  const tasks = useSelector(state => state.todo)
 
   const changeTaskStateHandler = id => {
-    setTasks(prevTasks => prevTasks.map(prevTask => prevTask.id === id ? { ...prevTask, done: !prevTask.done}: prevTask));
+    console.log(id);
   }
 
   const deleteTaskHandler = id => {
-    setTasks(prevTasks => prevTasks.filter(prevTask => prevTask.id !== id));
+    console.log(id);
   }
 
   const addTaskHandler = text => {
-    setTasks(prevTasks => [ ...prevTasks, { id: prevTasks.length, task: text, done: false }]);
+    console.log(text);
   }
 
   return <div>
@@ -22,7 +22,7 @@ function App() {
     <AddTodo onAddTask={addTaskHandler} />
 
     <div className="max-w-lg mx-auto mt-10">
-      { !tasks.length && <p className="text-center">No tasks yet!</p>}
+      { tasks.length === 0 && <p className="text-center">No tasks yet!</p>}
       { tasks.map(task => <Task key={task.id} task={task} changeTaskState={changeTaskStateHandler} deleteTask={deleteTaskHandler} />) }
     </div>
   </div>
