@@ -11,14 +11,13 @@ const todoSlice = createSlice({
   ],
   reducers: {
     add(state, action) {
-        const text = action.payload
-        const todo = { id: state.length, text, done: false}
-        state.push(todo)
+      const text = action.payload.trim();
+      if (text.length === 0) return;
+      const todo = { id: state.length, task: text, done: false };
+      state.push(todo);
     },
 
-    delete(state, action) {
-        state.filter(todo => todo.id !== action.payload)
-    },
+    
   },
 });
 

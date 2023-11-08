@@ -1,7 +1,10 @@
-function Task({ task, changeTaskState, deleteTask }) {
+import { useDispatch } from "react-redux";
+import { todoActions } from "../store/todo";
+
+function Task({ task, changeTaskState }) {
+    const dispatch = useDispatch()
 
     const changeHandler = () => changeTaskState(task.id);
-    const deleteHandler = () => deleteTask(task.id);
 
     return <div className="flex justify-between items-center gap-3 border-b py-2">
         <div className="flex-1 flex gap-3 items-center">

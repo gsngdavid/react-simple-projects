@@ -1,18 +1,19 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { todoActions } from "../store/todo";
 
-function AddTodo({ onAddTask }) {
+function AddTodo() {
     const [ input, setInput ] = useState('');
+    
+    const dispatch = useDispatch()
 
     const submitHandler = event => {
         event.preventDefault();
-        if(input.trim() === '') return;
-        onAddTask(input);
+        dispatch(todoActions.add(input))
         setInput('');
     }
 
-    const inputChangeHandler = event => {
-        setInput(event.target.value);
-    }
+    const inputChangeHandler = event => setInput(event.target.value);
 
     return <form onSubmit={submitHandler} className="max-w-lg mx-auto border flex justify-between gap-1 shadow-lg rounded-[3rem] px-4 py-3">
         <input
