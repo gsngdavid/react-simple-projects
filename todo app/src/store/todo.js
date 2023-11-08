@@ -20,6 +20,12 @@ const todoSlice = createSlice({
     delete(state, action) {
       return state.filter((todo) => todo.id !== action.payload);
     },
+
+    changeTaskStatus(state, action) {
+      const todoIndex = state.findIndex((todo) => todo.id === action.payload);
+      const todo = state[todoIndex];
+      state[todoIndex] = { ...todo, done: !todo.done };
+    },
   },
 });
 

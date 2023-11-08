@@ -1,15 +1,15 @@
 import { useDispatch } from "react-redux";
 import { todoActions } from "../store/todo";
 
-function Task({ task, changeTaskState }) {
+function Task({ task }) {
     const dispatch = useDispatch()
 
-    const changeHandler = () => changeTaskState(task.id);
+    const changeTaskStatus = () => dispatch(todoActions.changeTaskStatus(task.id))
     const deleteHandler = () => dispatch(todoActions.delete(task.id))
 
     return <div className="flex justify-between items-center gap-3 border-b py-2">
         <div className="flex-1 flex gap-3 items-center">
-            <input type="checkbox" id={task.id} checked={task.done} onChange={changeHandler} />
+            <input type="checkbox" id={task.id} checked={task.done} onChange={changeTaskStatus} />
             <label htmlFor={task.id} className="flex-1 text-[#596d79] hover:cursor-pointer">{task.task}</label>
         </div>
         <button className="group w-fit rounded-full bg-[#f2f3f5] p-3" onClick={deleteHandler}>
