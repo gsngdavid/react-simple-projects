@@ -5,6 +5,7 @@ function Task({ task, changeTaskState }) {
     const dispatch = useDispatch()
 
     const changeHandler = () => changeTaskState(task.id);
+    const deleteHandler = () => dispatch(todoActions.delete(task.id))
 
     return <div className="flex justify-between items-center gap-3 border-b py-2">
         <div className="flex-1 flex gap-3 items-center">
