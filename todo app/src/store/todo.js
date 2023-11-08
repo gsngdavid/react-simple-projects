@@ -2,13 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
   name: "Todo",
-  initialState: [
-    {
-      id: "0",
-      task: "IAmHere",
-      done: false,
-    },
-  ],
+  initialState: [],
   reducers: {
     add(state, action) {
       const text = action.payload.trim();
