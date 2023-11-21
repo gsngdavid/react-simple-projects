@@ -1,13 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
-  name: "Todo",
+  name: "Todos",
   initialState: [],
   reducers: {
     add(state, action) {
-      const text = action.payload.trim();
-      if (text.length === 0) return;
-      const todo = { id: state.length, task: text, done: false };
+      const todo = { id: new Date().toLocaleString(), task: action.payload, done: false };
       state.push(todo);
     },
 
@@ -16,9 +14,8 @@ const todoSlice = createSlice({
     },
 
     changeTaskStatus(state, action) {
-      const todoIndex = state.findIndex((todo) => todo.id === action.payload);
-      const todo = state[todoIndex];
-      state[todoIndex] = { ...todo, done: !todo.done };
+      const todo = state.find(todo => todo.id === action.payload);
+      todo.done = !todo.done;
     },
   },
 });

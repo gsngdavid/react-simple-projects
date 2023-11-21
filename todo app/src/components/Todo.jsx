@@ -1,16 +1,16 @@
 import { useDispatch } from "react-redux";
-import { todoActions } from "../store/todo";
+import { todoActions } from "../store/todos";
 
-function Task({ task }) {
+function Task({ todo }) {
     const dispatch = useDispatch()
 
-    const changeTaskStatus = () => dispatch(todoActions.changeTaskStatus(task.id))
-    const deleteHandler = () => dispatch(todoActions.delete(task.id))
+    const changeTaskStatus = () => dispatch(todoActions.changeTaskStatus(todo.id))
+    const deleteHandler = () => dispatch(todoActions.delete(todo.id))
 
     return <div className="flex justify-between items-center gap-3 border-b py-2">
         <div className="flex-1 flex gap-3 items-center">
-            <input type="checkbox" id={task.id} checked={task.done} onChange={changeTaskStatus} />
-            <label htmlFor={task.id} className="flex-1 text-[#596d79] hover:cursor-pointer">{task.task}</label>
+            <input type="checkbox" id={todo.id} checked={todo.done} onChange={changeTaskStatus} />
+            <label htmlFor={todo.id} className="flex-1 text-[#596d79] hover:cursor-pointer">{todo.task}</label>
         </div>
         <button className="group w-fit rounded-full bg-[#f2f3f5] p-3" onClick={deleteHandler}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-3 fill-red-500 group-hover:transform group-hover:transition-transform group-hover:scale-125">
