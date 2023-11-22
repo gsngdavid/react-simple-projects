@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    input:checked + label {
+        text-decoration: line-through;
+    }
+}
+
+
+@font-face {
+    font-family: Inter-Regular;
+    src: url("../public/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: Inter-Bold;
+    src: url("../public/fonts/Inter-Bold.ttf");
+}
