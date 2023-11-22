@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const todoSlice = createSlice({
   name: "Todos",
   initialState: [],
   reducers: {
     add(state, action) {
-      const todo = { id: new Date().toLocaleString(), task: action.payload, done: false };
+      const todo = { id: nanoid(), task: action.payload, done: false };
       state.push(todo);
     },
 
